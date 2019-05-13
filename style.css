@@ -5,6 +5,7 @@ body {
 h1 {
 	background-color: #0079bf;
 	margin: 0;
+	padding: 10px;
 	color: white;
 }
 h1,p {
@@ -22,7 +23,6 @@ em {
 }
 input {
 	font-size: 1.5em;
-	height: 30px;
 }
 button {
 	border: 0;
@@ -33,6 +33,7 @@ button {
 ul {
 	width: 50%;
 	padding: 10px;
+	margin-left: 10px;
 	background-color: #3EB9DE;
 	border-radius: 5px;
 	list-style-position: inside;
@@ -47,4 +48,8 @@ li {
 	width: 33%;
 	color: black;
 	overflow-x: hidden;
+	cursor: pointer;
+}
+.strike {
+	text-decoration: line-through;
 }

@@ -1,7 +1,8 @@
-var button, input, ul;
-button = document.getElementById("enter");
-input = document.getElementById("userInput")
-ul = document.querySelector("ul");
+var button, input, ul, li;
+button = document.getElementById('enter');
+input = document.getElementById('userInput')
+ul = document.querySelector('ul');
+li = document.querySelector('li')
 
 function createElement() {
 	var listItem, listItemText;
@@ -30,3 +31,6 @@ function addAfterEnter() {
 
 button.addEventListener("click", addAfterClick);
 input.addEventListener("keydown", addAfterEnter);
+li.addEventListener("click", function() {
+	li.classList.toggle('strike');
+});
