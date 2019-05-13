@@ -1,5 +1,5 @@
 body {
-	font-family: sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 h1 {
 	text-decoration: underline;
@@ -10,4 +10,36 @@ h1,p {
 em {
 	font-weight: bold;
 	font-size: 2em;
+}
+#inputArea {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 25%;
+	justify-content: space-around;
+}
+input {
+	font-size: 1.5em;
+}
+button {
+	border: 0;
+	background-color: tomato;
+	color: white;
+	height: 35px;
+}
+ul {
+	width: 50%;
+	border: 1px solid black;
+	border-radius: 5px;
+	list-style-position: inside;
+	list-style-type: square;
+}
+li {
+	border: 1px solid black;
+	border-radius: 3px;
+	box-shadow: 2px 2px grey;
+	padding: 5px;
+	margin: 10px;
+	width: 33%;
+	overflow-x: hidden;
 }
