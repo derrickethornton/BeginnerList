@@ -3,7 +3,7 @@ body {
 	margin: 0;
 }
 h1 {
-	background-color: dodgerblue;
+	background-color: #0079bf;
 	margin: 0;
 	color: white;
 }
@@ -18,7 +18,7 @@ em {
 #inputArea {
 	display: flex;
 	flex-direction: row;
-	align-items: center;
+	align-content: center;
 }
 input {
 	font-size: 1.5em;
@@ -26,23 +26,25 @@ input {
 }
 button {
 	border: 0;
-	background-color: tomato;
+	background-color: #6D8EA2;
 	color: white;
-	height: 35px;
+	font-size: 1.5em;
 }
 ul {
 	width: 50%;
-	border: 4px solid black;
+	padding: 10px;
+	background-color: #3EB9DE;
 	border-radius: 5px;
 	list-style-position: inside;
 	list-style-type: square;
 }
 li {
+	background-color: white;
 	border: 1px solid black;
 	border-radius: 3px;
-	box-shadow: 2px 2px grey;
 	padding: 5px;
 	margin: 10px;
 	width: 33%;
+	color: black;
 	overflow-x: hidden;
 }
