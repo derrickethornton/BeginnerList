@@ -1,21 +1,32 @@
-var button = document.getElementById("enter");
-var input = document.getElementById("userInput")
-var ul = document.querySelector("ul");
-button.addEventListener("click", function() {
-	checkInput();
-});
-input.addEventListener("keydown", function(event) {
-	if(event.keyCode === 13) {
-		checkInput();
-	}
-})
+var button, input, ul;
+button = document.getElementById("enter");
+input = document.getElementById("userInput")
+ul = document.querySelector("ul");
 
-function checkInput() {
+function createElement() {
+	var listItem, listItemText;
+	listItem = document.createElement("li");
+	listItemText = document.createTextNode(input.value);
+	listItem.appendChild(listItemText);
+	ul.appendChild(listItem);
+	input.value = "";
+}
+
+function checkAddInputValue() {
 	if(input.value != "") {
-		var listItem = document.createElement("li");
-		var listItemText = document.createTextNode(input.value);
-		listItem.appendChild(listItemText);
-		ul.appendChild(listItem);
-		input.value = "";
+		createElement();
 	}
 }
+
+function addAfterClick() {
+	checkAddInputValue();
+}
+
+function addAfterEnter() {
+	if(event.keyCode === 13) {
+		checkAddInputValue();
+	}
+}
+
+button.addEventListener("click", addAfterClick);
+input.addEventListener("keydown", addAfterEnter);
