@@ -5,11 +5,19 @@ ul = document.querySelector('ul');
 li = document.querySelector('li')
 
 function createElement() {
-	var listItem, listItemText;
-	listItem = document.createElement("li");
+	var listItem, listItemText, delButton, delButtonText;
+	listItem = document.createElement('li');
+	delButton = document.createElement('button');
 	listItemText = document.createTextNode(input.value);
+	delButtonText = document.createTextNode('Delete');
 	listItem.appendChild(listItemText);
+	delButton.appendChild(delButtonText);
+	delButton.classList.add('circle');
+	delButton.addEventListener('click', function() {
+		ul.removeChild(delButton.parentNode);
+	});
 	ul.appendChild(listItem);
+	listItem.appendChild(delButton);
 	input.value = "";
 }
 

@@ -23,12 +23,21 @@ em {
 }
 input {
 	font-size: 1.5em;
+	border-radius: 10px;
+	border: 1px solid #0079bf;
+}
+input:focus {
+	background-color: #0079bf;
+	color: white;
+}
+input::placeholder {
+	color: #0079bf;
 }
 button {
 	border: 0;
 	background-color: #6D8EA2;
 	color: white;
-	font-size: 1.5em;
+	border-radius: 10px;
 }
 ul {
 	width: 50%;
@@ -40,12 +49,14 @@ ul {
 	list-style-type: square;
 }
 li {
+	display: flex;
+	align-items: center;
 	background-color: white;
 	border: 1px solid black;
 	border-radius: 3px;
 	padding: 5px;
 	margin: 10px;
-	width: 33%;
+	width: 50%;
 	color: black;
 	overflow-x: hidden;
 	cursor: pointer;
@@ -56,4 +67,10 @@ li::selection {
 }
 .strike {
 	text-decoration: line-through;
+}
+.circle {
+	font-size: 10px;
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
 }
