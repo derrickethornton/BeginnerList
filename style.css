@@ -50,6 +50,10 @@ li {
 	overflow-x: hidden;
 	cursor: pointer;
 }
+li::selection {
+	color: black;
+	background-color: lightblue;
+}
 .strike {
 	text-decoration: line-through;
 }
