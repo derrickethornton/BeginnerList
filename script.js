@@ -1,23 +1,35 @@
-var button, input, ul, li;
+var button, input, ul, example;
+
 button = document.getElementById('enter');
 input = document.getElementById('userInput')
 ul = document.querySelector('ul');
-li = document.querySelector('li')
+example = document.querySelector('li')
 
 function createElement() {
-	var listItem, listItemText, delButton, delButtonText;
+	if(example != undefined)
+	{
+		ul.removeChild(example);
+		example = undefined;
+	}
+	var listItem, listItemText, delButton, delButtonText, divButton;
 	listItem = document.createElement('li');
 	delButton = document.createElement('button');
+	divButton = document.createElement('div');
 	listItemText = document.createTextNode(input.value);
 	delButtonText = document.createTextNode('Delete');
 	listItem.appendChild(listItemText);
 	delButton.appendChild(delButtonText);
 	delButton.classList.add('circle');
 	delButton.addEventListener('click', function() {
-		ul.removeChild(delButton.parentNode);
+		ul.removeChild(divButton);
 	});
-	ul.appendChild(listItem);
-	listItem.appendChild(delButton);
+	listItem.addEventListener('click', function() {
+		listItem.classList.toggle('strike');
+	});
+	divButton.appendChild(listItem);
+	divButton.appendChild(delButton);
+	divButton.classList.add('flexed');
+	ul.appendChild(divButton);
 	input.value = "";
 }
 
@@ -39,6 +51,6 @@ function addAfterEnter() {
 
 button.addEventListener("click", addAfterClick);
 input.addEventListener("keydown", addAfterEnter);
-li.addEventListener("click", function() {
+example.addEventListener("click", function() {
 	li.classList.toggle('strike');
 });
