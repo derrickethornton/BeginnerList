@@ -68,7 +68,7 @@ li::selection {
 	color: black;
 	background-color: lightblue;
 }
-.strike {
+.done {
 	text-decoration: line-through;
 }
 .circle {

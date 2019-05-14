@@ -24,7 +24,7 @@ function createElement() {
 		ul.removeChild(divButton);
 	});
 	listItem.addEventListener('click', function() {
-		listItem.classList.toggle('strike');
+		listItem.classList.toggle('done');
 	});
 	divButton.appendChild(listItem);
 	divButton.appendChild(delButton);
@@ -52,5 +52,5 @@ function addAfterEnter() {
 button.addEventListener("click", addAfterClick);
 input.addEventListener("keydown", addAfterEnter);
 example.addEventListener("click", function() {
-	li.classList.toggle('strike');
+	li.classList.toggle('done');
 });
